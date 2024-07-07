@@ -1,0 +1,58 @@
+/* Basic table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+.issueStyle {
+  background-color: #54a2c6;
+  color: white;
+  border-right: 2px solid white;
+}
+
+/* Table header styling */
+thead th {
+  background-color: rgb(195, 231, 248);
+  color: #12628b;
+  font-weight: bold;
+  padding: 12px;
+  border-bottom: 2px solid #ddd;
+  text-align: center;
+}
+
+/* Table body styling */
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #dddddd;
+}
+
+/* Highlighted cell styling */
+tbody tr td.highlighted {
+  background-color: #54a2c6;
+  color:white
+}
+
+/* Hover effect for table rows */
+tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Cell alignment */
+td {
+  text-align: center;
+}
+
+/* Responsive table styling */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+
+  thead th,
+  tbody td {
+    padding: 8px;
+  }
+}

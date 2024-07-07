@@ -1,0 +1,27 @@
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      @for(user of users; track user){
+      <th>{{ user }}</th>
+      }
+    </tr>
+  </thead>
+  <tbody>
+    @for(issue of issues; track issue){
+    <tr>
+      <td class="issueStyle">{{ issue }}</td>
+      @for(user of users; track user){ @for(opinion of getOpinions(user,issue);
+      track $index){
+      <td
+        [class.highlighted]="isHighlighted(user, issue)"
+        (click)="toggleHighlight(user, issue)"
+      >
+        {{ opinion.statement }}
+      </td>
+      } }
+    </tr>
+    }
+  </tbody>
+</table>
+
