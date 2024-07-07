@@ -1,0 +1,4 @@
+@for(user of users; track user){
+    <button (click)="vote($index)">{{user}}</button>
+}
+<p>{{error}}</p>
